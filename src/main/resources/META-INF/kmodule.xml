@@ -1,0 +1,9 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="esteelKbase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+    <ksession name="esteelSession" type="stateful" default="true" clockType="realtime">
+      <workItemHandlers>
+        <workItemHandler type="new org.jbpm.process.workitem.email.EmailWorkItemHandler(&quot;localhost&quot;,&quot;25&quot;,&quot;me@localhost&quot;,&quot;password&quot;);" name="Email"/>
+      </workItemHandlers>
+    </ksession>
+  </kbase>
+</kmodule>
